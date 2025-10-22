@@ -1,7 +1,5 @@
 # Taller 05-06
-------------------------------------------
-Objetivo
-------------------------------------------
+# Objetivo
 Conocer la sintaxis de JavaScript  en React.
 -------------------------------------------
 ![image](https://github.com/KevinSimbana04/TallerAW_05-06/blob/main/public/Descripcion.png)
