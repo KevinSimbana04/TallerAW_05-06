@@ -1,46 +1,34 @@
 
-import './App.css'
+import {  BrowserRouter,  Routes,  Route } from "react-router";
+import Primero from "../pages/Primero.jsx"
+import Segundo from "../pages/Segundo.jsx"
+import MostrarPersonajes from "../pages/MostrarPersonajes.jsx"
+import Props from "../pages/Props.jsx"
+import Zustand from "../pages/Zustand.jsx"
+import LandingPage from "../pages/LandingPage.jsx";
+import Renderizado from "../pages/Renderizado";
+import LocalStorage from "../pages/LocalStorage";
+import Descripcion from "../pages/Descripcion.jsx";
 
 function App() {
-
   return (
-    <div className="container">
-      <header>
-        <h1>Laboratorio 6</h1>
-        <p>Desarrollo de Aplicaciones Web - Escuela Politécnica Nacional</p>
-      </header>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />}>
+          <Route index element={<Renderizado />} />
+          <Route path="descripcion" element={<Descripcion/>} />
+          <Route path="useState" element={<Primero/>} />
+          <Route path="useffect" element={<Segundo/>} />
+          <Route path="customhook" element={<MostrarPersonajes />} />
+          <Route path="props" element={<Props/>} />
+          <Route path="zustand" element={<Zustand/>} />
+          <Route path="renderizado" element={<Renderizado />} />
+          <Route path="localStorage" element={<LocalStorage />} />
+        </Route>
 
-      <section>
-        <h2>Mercy</h2>
-      </section>
-
-      <section>
-        <h2>Kevin</h2>
-
-      </section>
-
-      <section>
-        <h2>Joel</h2>
-      </section>
-
-      <footer>
-        <table border="1">
-          <thead>
-            <tr>
-              <th>Repositorio</th>
-              <th>Despliegue</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><a href="https://github.com/KevinSimbana04/Taller05-06_AW">Taller 05-06</a></td>
-              <td><a href="#">Netlify</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </footer>
-    </div>
-  );
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App
